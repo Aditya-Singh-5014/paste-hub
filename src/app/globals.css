@@ -107,19 +107,12 @@ h1 {
   box-shadow: var(--shadow);
   backdrop-filter: blur(6px);
   animation: floatIn 700ms ease-out;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
 }
 
 .field {
@@ -135,8 +128,8 @@ h1 {
 }
 
 .field:has(textarea) textarea {
-  min-height: 200px;
-  max-height: 350px;
+  min-height: 150px;
+  max-height: 300px;
 }
 
 label {
@@ -351,11 +344,17 @@ textarea {
 
 @media (max-width: 720px) {
   .page {
-    padding: 24px 16px;
+    padding: 20px 16px 40px;
   }
 
   .card {
     padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .field:has(textarea) textarea {
+    min-height: 120px;
+    max-height: 200px;
   }
 
   .hero {
